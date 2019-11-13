@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		D6D03741237BA4310098EABF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D03740237BA4310098EABF /* AppDelegate.m */; };
 		D6D03744237BA4310098EABF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D03743237BA4310098EABF /* SceneDelegate.m */; };
-		D6D03747237BA4310098EABF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D03746237BA4310098EABF /* ViewController.m */; };
 		D6D0374A237BA4310098EABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D03748237BA4310098EABF /* Main.storyboard */; };
 		D6D0374C237BA4330098EABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D0374B237BA4330098EABF /* Assets.xcassets */; };
 		D6D0374F237BA4330098EABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D0374D237BA4330098EABF /* LaunchScreen.storyboard */; };
 		D6D03752237BA4330098EABF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D03751237BA4330098EABF /* main.m */; };
+		D6D03760237BA77D0098EABF /* MJSUsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0375F237BA77D0098EABF /* MJSUsersTableViewController.m */; };
+		D6D03763237BA79D0098EABF /* MJSUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D03762237BA79D0098EABF /* MJSUserDetailViewController.m */; };
+		D6D03766237BA7C90098EABF /* MJSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D03765237BA7C90098EABF /* MJSUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +24,17 @@
 		D6D03740237BA4310098EABF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D6D03742237BA4310098EABF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		D6D03743237BA4310098EABF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		D6D03745237BA4310098EABF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D6D03746237BA4310098EABF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D6D03749237BA4310098EABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6D0374B237BA4330098EABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6D0374E237BA4330098EABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6D03750237BA4330098EABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D03751237BA4330098EABF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D6D0375E237BA77D0098EABF /* MJSUsersTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJSUsersTableViewController.h; sourceTree = "<group>"; };
+		D6D0375F237BA77D0098EABF /* MJSUsersTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJSUsersTableViewController.m; sourceTree = "<group>"; };
+		D6D03761237BA79D0098EABF /* MJSUserDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJSUserDetailViewController.h; sourceTree = "<group>"; };
+		D6D03762237BA79D0098EABF /* MJSUserDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJSUserDetailViewController.m; sourceTree = "<group>"; };
+		D6D03764237BA7C90098EABF /* MJSUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJSUser.h; sourceTree = "<group>"; };
+		D6D03765237BA7C90098EABF /* MJSUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJSUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +67,71 @@
 		D6D0373E237BA4310098EABF /* Random Users */ = {
 			isa = PBXGroup;
 			children = (
+				D6D03758237BA6ED0098EABF /* App Lifecycle */,
+				D6D0375C237BA7330098EABF /* Models */,
+				D6D0375D237BA7440098EABF /* Model Controllers */,
+				D6D0375B237BA7260098EABF /* View Controllers */,
+				D6D0375A237BA7190098EABF /* Storyboards */,
+				D6D03759237BA7040098EABF /* Resources */,
+			);
+			path = "Random Users";
+			sourceTree = "<group>";
+		};
+		D6D03758237BA6ED0098EABF /* App Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
 				D6D0373F237BA4310098EABF /* AppDelegate.h */,
 				D6D03740237BA4310098EABF /* AppDelegate.m */,
 				D6D03742237BA4310098EABF /* SceneDelegate.h */,
 				D6D03743237BA4310098EABF /* SceneDelegate.m */,
-				D6D03745237BA4310098EABF /* ViewController.h */,
-				D6D03746237BA4310098EABF /* ViewController.m */,
-				D6D03748237BA4310098EABF /* Main.storyboard */,
-				D6D0374B237BA4330098EABF /* Assets.xcassets */,
-				D6D0374D237BA4330098EABF /* LaunchScreen.storyboard */,
-				D6D03750237BA4330098EABF /* Info.plist */,
 				D6D03751237BA4330098EABF /* main.m */,
 			);
-			path = "Random Users";
+			name = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		D6D03759237BA7040098EABF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6D0374B237BA4330098EABF /* Assets.xcassets */,
+				D6D03750237BA4330098EABF /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D6D0375A237BA7190098EABF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D6D03748237BA4310098EABF /* Main.storyboard */,
+				D6D0374D237BA4330098EABF /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D6D0375B237BA7260098EABF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6D0375E237BA77D0098EABF /* MJSUsersTableViewController.h */,
+				D6D0375F237BA77D0098EABF /* MJSUsersTableViewController.m */,
+				D6D03761237BA79D0098EABF /* MJSUserDetailViewController.h */,
+				D6D03762237BA79D0098EABF /* MJSUserDetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D6D0375C237BA7330098EABF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6D03764237BA7C90098EABF /* MJSUser.h */,
+				D6D03765237BA7C90098EABF /* MJSUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D6D0375D237BA7440098EABF /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +160,7 @@
 		D6D03734237BA4310098EABF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MJS;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Michael Stoffer";
 				TargetAttributes = {
@@ -146,9 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D03747237BA4310098EABF /* ViewController.m in Sources */,
 				D6D03741237BA4310098EABF /* AppDelegate.m in Sources */,
 				D6D03752237BA4330098EABF /* main.m in Sources */,
+				D6D03766237BA7C90098EABF /* MJSUser.m in Sources */,
+				D6D03760237BA77D0098EABF /* MJSUsersTableViewController.m in Sources */,
+				D6D03763237BA79D0098EABF /* MJSUserDetailViewController.m in Sources */,
 				D6D03744237BA4310098EABF /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MJSUserDetailViewController.h
 //  Random Users
 //
 //  Created by Michael Stoffer on 11/12/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class MJSUser;
 
+@interface MJSUserDetailViewController : UIViewController
+
+@property (nonatomic) MJSUser *user;
 
 @end
-
