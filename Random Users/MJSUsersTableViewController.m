@@ -43,6 +43,9 @@
     MJSUser *user = [self.users objectAtIndex:indexPath.row];
     cell.textLabel.text = user.name;
     
+    NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:user.thumbnailImage]];
+    cell.imageView.image = [[UIImage alloc] initWithData:imageData];
+    
     return cell;
 }
 
