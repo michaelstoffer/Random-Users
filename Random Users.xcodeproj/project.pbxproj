@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6751D1F237CEDD100F797C8 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6751D1E237CEDD100F797C8 /* UserController.swift */; };
 		D6D03741237BA4310098EABF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D03740237BA4310098EABF /* AppDelegate.m */; };
 		D6D03744237BA4310098EABF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D03743237BA4310098EABF /* SceneDelegate.m */; };
 		D6D0374A237BA4310098EABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D03748237BA4310098EABF /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6751D1D237CEDD000F797C8 /* Random Users-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Random Users-Bridging-Header.h"; sourceTree = "<group>"; };
+		D6751D1E237CEDD100F797C8 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		D6D0373C237BA4310098EABF /* Random Users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Users.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D0373F237BA4310098EABF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6D03740237BA4310098EABF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 		D6D0375D237BA7440098EABF /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6751D1E237CEDD100F797C8 /* UserController.swift */,
+				D6751D1D237CEDD000F797C8 /* Random Users-Bridging-Header.h */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				TargetAttributes = {
 					D6D0373B237BA4310098EABF = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -209,6 +215,7 @@
 				D6D03752237BA4330098EABF /* main.m in Sources */,
 				D6D03766237BA7C90098EABF /* MJSUser.m in Sources */,
 				D6D03760237BA77D0098EABF /* MJSUsersTableViewController.m in Sources */,
+				D6751D1F237CEDD100F797C8 /* UserController.swift in Sources */,
 				D6D03763237BA79D0098EABF /* MJSUserDetailViewController.m in Sources */,
 				D6D03744237BA4310098EABF /* SceneDelegate.m in Sources */,
 			);
@@ -350,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XVDLP5XYQ;
 				INFOPLIST_FILE = "Random Users/Info.plist";
@@ -359,6 +367,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaelstoffer.Random-Users";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Random Users/Random Users-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -367,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XVDLP5XYQ;
 				INFOPLIST_FILE = "Random Users/Info.plist";
@@ -376,6 +388,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaelstoffer.Random-Users";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Random Users/Random Users-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

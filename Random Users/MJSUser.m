@@ -13,15 +13,15 @@
 - (instancetype)initWithName:(NSString *)name
                        phone:(NSString *)phone
                        email:(NSString *)email
-              thumbnailImage:(NSURL *)thumbnailImage
-                  largeImage:(NSURL *)largeImage
+              thumbnailImage:(NSString *)thumbnailImage
+                  largeImage:(NSString *)largeImage
 {
     if (self = [super init]) {
-        _name = name.copy;
-        _phone = phone.copy;
-        _email = email.copy;
-        _thumbnailImage = thumbnailImage.copy;
-        _largeImage = largeImage.copy;
+        _name = [name copy];
+        _phone = [phone copy];
+        _email = [email copy];
+        _thumbnailImage = [thumbnailImage copy];
+        _largeImage = [largeImage copy];
     }
     return self;
 }
@@ -30,8 +30,8 @@
     NSString *name = [NSString stringWithFormat:@"%@ %@", dictionary[@"name"][@"first"], dictionary[@"name"][@"last"]];
     NSString *phone = dictionary[@"phone"];
     NSString *email = dictionary[@"email"];
-    NSURL *thumbnailImage = dictionary[@"picture"][@"thumbnail"];
-    NSURL *largeImage = dictionary[@"picture"][@"large"];
+    NSString *thumbnailImage = dictionary[@"picture"][@"thumbnail"];
+    NSString *largeImage = dictionary[@"picture"][@"large"];
         
     return [self initWithName:name phone:phone email:email thumbnailImage:thumbnailImage largeImage:largeImage];
 }

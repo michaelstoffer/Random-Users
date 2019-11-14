@@ -6,21 +6,21 @@
 //  Copyright © 2019 Michael Stoffer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MJSUser : NSObject
 
 @property (nonatomic, copy, readonly, nonnull) NSString *name;
 @property (nonatomic, copy, readonly, nonnull) NSString *phone;
 @property (nonatomic, copy, readonly, nonnull) NSString *email;
-@property (nonatomic, copy, readonly, nonnull) NSURL *thumbnailImage;
-@property (nonatomic, copy, readonly, nonnull) NSURL *largeImage;
+@property (nonatomic, copy, readonly, nonnull) NSString *thumbnailImage;
+@property (nonatomic, copy, readonly, nonnull) NSString *largeImage;
 
 - (nonnull instancetype)initWithName:(nonnull NSString *)name
                                phone:(nonnull NSString *)phone
                                email:(nonnull NSString *)email
-                      thumbnailImage:(nonnull NSURL *)thumbnailImage
-                          largeImage:(nonnull NSURL *)largeImage;
+                      thumbnailImage:(nonnull NSString *)thumbnailImage
+                          largeImage:(nonnull NSString *)largeImage;
 
 - (nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dictionary;
 

@@ -7,9 +7,13 @@
 //
 
 #import "MJSUsersTableViewController.h"
+#import "MJSUserDetailViewController.h"
 #import "MJSUser.h"
+#import "Random_Users-Swift.h"
 
 @interface MJSUsersTableViewController ()
+
+@property (nonatomic) NSArray<MJSUser *> *users;
 
 @end
 
@@ -17,18 +21,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [MJSUserController.sharedController fetchUsersWithCompletion:^(NSArray<MJSUser *> *users, NSError *error) {
+        if (error) {
+            NSLog(@"Error returning users: %@", error);
+        }
+        
+        self.users = users;
+        [self.tableView reloadData];
+    }];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.users.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
     
-//    MJSUser *user = 
+    MJSUser *user = [self.users objectAtIndex:indexPath.row];
+    cell.textLabel.text = user.name;
     
     return cell;
 }
@@ -37,8 +50,12 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ShowDetail"]) {
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        MJSUserDetailViewController *detailVC = segue.destinationViewController;
+        
+        detailVC.user = [self.users objectAtIndex:indexPath.row];
+    }
 }
 
 @end
