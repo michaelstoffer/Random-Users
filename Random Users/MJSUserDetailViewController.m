@@ -9,6 +9,10 @@
 #import "MJSUserDetailViewController.h"
 #import "MJSUser.h"
 
+#import "Random_Users-Swift.h"
+
+void *KVOContext = &KVOContext;
+
 @interface MJSUserDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -22,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self updateViews];
+    [MJSUserController.sharedController fillInUserWithUser:self.user];
 }
 
 - (void)updateViews
@@ -40,8 +44,28 @@
 - (void)setUser:(MJSUser *)user
 {
     if (_user != user) {
+        [_user removeObserver:self forKeyPath:@"phone" context:KVOContext];
+        [_user removeObserver:self forKeyPath:@"email" context:KVOContext];
+        [_user removeObserver:self forKeyPath:@"thumbnailImage" context:KVOContext];
+        [_user removeObserver:self forKeyPath:@"largeImage" context:KVOContext];
+        
         _user = user;
-        [self updateViews];
+        
+        [_user addObserver:self forKeyPath:@"phone" options:NSKeyValueObservingOptionInitial context:KVOContext];
+        [_user addObserver:self forKeyPath:@"email" options:NSKeyValueObservingOptionInitial context:KVOContext];
+        [_user addObserver:self forKeyPath:@"thumbnailImage" options:NSKeyValueObservingOptionInitial context:KVOContext];
+        [_user addObserver:self forKeyPath:@"largeImage" options:NSKeyValueObservingOptionInitial context:KVOContext];
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    if (context == KVOContext) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateViews];
+        });
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
 

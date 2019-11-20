@@ -28,12 +28,12 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     NSString *name = [NSString stringWithFormat:@"%@ %@", dictionary[@"name"][@"first"], dictionary[@"name"][@"last"]];
-    NSString *phone = dictionary[@"phone"];
-    NSString *email = dictionary[@"email"];
-    NSString *thumbnailImage = dictionary[@"picture"][@"thumbnail"];
-    NSString *largeImage = dictionary[@"picture"][@"large"];
+//    NSString *phone = dictionary[@"phone"];
+//    NSString *email = dictionary[@"email"];
+//    NSString *thumbnailImage = dictionary[@"picture"][@"thumbnail"];
+//    NSString *largeImage = dictionary[@"picture"][@"large"];
         
-    return [self initWithName:name phone:phone email:email thumbnailImage:thumbnailImage largeImage:largeImage];
+    return [self initWithName:name phone:NULL email:NULL thumbnailImage:NULL largeImage:NULL];
 }
 
 @end
